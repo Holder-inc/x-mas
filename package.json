@@ -11,7 +11,8 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"deploy": "touch build/.nojekyll && gh-pages -d build -t true"
+		"add-domain": "echo \"x-mas.holder.team\" > build/CNAME",
+		"deploy": "touch build/.nojekyll && npm run add-domain && gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0",
