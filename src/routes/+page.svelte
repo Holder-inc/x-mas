@@ -15,7 +15,7 @@
 	$: shouldOpenInChrome = false;
 
 	const getShareUrl = (message: string) => {
-		const host = import.meta.env.DEV ? 'http://localhost:5173' : 'https://swimmingkiim.github.io';
+		const host = import.meta.env.DEV ? 'http://localhost:5173' : 'https://x-mas.holder.team';
 		const url = `${host}${base}?message=${message}`;
 		return encodeURI(url);
 	};
