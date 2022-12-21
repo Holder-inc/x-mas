@@ -16,7 +16,7 @@ const config = {
 			fallback: 'index.html',
 		}),
 		paths: {
-		 base: "/x-mas",
+		 base: "",
 		},
 		appDir: 'internal',
 	}
