@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
 	import Konva from 'konva';
 	import ChristmasTree from 'src/components/ChristmasTree/ChristmasTree.svelte';
 	import House from 'src/components/House/House.svelte';
@@ -12,23 +11,6 @@
 
 	let width: number;
 	let height: number;
-
-	$: isFullScreen = false;
-
-	const toggleFullScreen = () => {
-		const fullScreenTarget: HTMLElement = document.body;
-		if (!document.fullscreenElement) {
-			if (fullScreenTarget.requestFullscreen) {
-				isFullScreen = true;
-				return fullScreenTarget.requestFullscreen();
-			}
-		} else {
-			if (document.exitFullscreen) {
-				isFullScreen = false;
-				return document.exitFullscreen();
-			}
-		}
-	};
 
 	const createCircle = (x: number, y: number) => {
 		const circle = new Konva.Circle({
@@ -93,12 +75,6 @@
 <svelte:window bind:innerWidth={width} bind:innerHeight={height} />
 <main>
 	<slot />
-	<header>
-		<a href="{base}/about" class="link link-hover">About this project</a>
-		<button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" on:click={toggleFullScreen}
-			>{isFullScreen ? 'X' : 'Full Screen'}</button
-		>
-	</header>
 	<div id="container" />
 	<div id="tree-container">
 		<ChristmasTree />
