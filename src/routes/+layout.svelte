@@ -6,6 +6,7 @@
 
 	import '../app.css';
 	import { initKakao } from '../services/Kakao/kakao';
+	import BelowBanner from 'src/components/BelowBanner/BelowBanner.svelte';
 
 	export const prerender = true;
 
@@ -87,6 +88,9 @@
 	</div>
 	<div id="sky" />
 </main>
+<footer>
+	<BelowBanner />
+</footer>
 
 <style lang="scss">
 	main {
@@ -154,5 +158,9 @@
 		a {
 			color: #5e5e5e;
 		}
+	}
+	footer {
+		padding: 1em;
+		@apply px-[5%] md:px-[25%] lg:px-[30%];
 	}
 </style>
