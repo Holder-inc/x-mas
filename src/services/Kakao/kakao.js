@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
-import { KAKAO_JS_KEY, KAKAO_MESSAGE_TEMPLATE_KEY } from "src/config/secretKey";
+import { KAKAO_JS_KEY } from "src/config/secretKey";
 
 export const initKakao = () => {
 	if (!window.__kakao__.isInitialized()) {
