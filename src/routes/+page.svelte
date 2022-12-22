@@ -253,7 +253,7 @@
 	#title-container {
 		width: 100%;
 
-		position: fixed;
+		position: absolute;
 		z-index: 100;
 		@apply top-[40%] md:top-[10%];
 		// below code is applied in textarea class string
